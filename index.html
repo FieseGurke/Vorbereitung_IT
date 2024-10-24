@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP1 Vorbereitung</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showContent('home')">Startseite</a></li>
+            <li><a href="#thema1" onclick="showContent('thema1')">AP1 - Allgemein</a></li>
+            <li><a href="#thema2" onclick="showContent('thema2')">IPv4</a></li>
+            <li><a href="#thema3" onclick="showContent('thema3')">IPv6</a></li>
+            <li><a href="#flashcards" onclick="showContent('flashcards')">Karteikarte</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="content">
+        <h1>Inhaltsverzeichnis</h1>
+        <ul>
+            <li><a href="#thema1" onclick="showContent('thema1')">AP1 - Allgemein</a></li>
+            <li><a href="#thema2" onclick="showContent('thema2')">IPv4</a></li>
+            <li><a href="#thema3" onclick="showContent('thema3')">IPv6</a></li>
+            <li><a href="#flashcards" onclick="showContent('flashcards')">Karteikarte</a></li>
+        </ul>
+    </div>
+
+<!-- ##########################################################################################################
+#Thema 1 - AP1 Allgemein
+########################################################################################################## -->
+
+    <div id="thema1" class="content">
+        <h1>AP1 - Allgemein</h1>
+        <h2>SQL</h2>
+        <p>einfache SQL-Statements – kommt oft vor (kein Join)</p>
+        <h2>Diagramme</h2>
+        <ul>
+            <li>ER-Modelle</li>
+            <li>Klassendiagramme</li>
+            <li>Anwendungsfalldiagramme</li>
+        </ul>
+        <h2>ER-Modelle</h2>
+        <p>Konzept aus der Softwareentwicklung, Darstellung von Datenstrukturen in einem Datenbanksystem. Zeigt wie und Beziehung von Informationen zueinander.</p>
+        <h2>Klassendiagramme</h2>
+        <p>Strukturdiagramm der Unified Modeling Language (UML). Können Klassen und ihre Beziehungen untereinander grafisch dargestellt werden.</p>
+        <h2>Nutzfalldiagramm</h2>
+        <p>Strukturdiagramm der Unified Modeling Language (UML)</p>
+
+
+    </div>
+
+
+<!-- ##########################################################################################################
+Thema 2 - IPv4
+########################################################################################################## -->
+
+    <div id="thema2" class="content">
+        <h1>IPv4</h1>
+        <h2>Was man wissen sollte:</h2>
+        <ul>
+            <li><b>Was ist eine Subnetzmaske?</b></li>
+            <li><b>Was ist die CIDR-Notation?</b></li>
+            <li><b>Was ist eine Internet Protokoll (IP)?</b></li>
+            Es regelt die Datenübertragung in Netzwerken
+        </ul>
+
+<h2> Kurzer Überblick </h2>
+        <ul>
+            <li>Entwickelt in den 1980er Jahren</li>
+            <li>IPv4-Adresse besteht aus 4 Oktetten</li>
+            <li>Jedes Oktett hat 8 Bits</li>
+            <li>Insgesamt 32 Bits pro IPv4-Adresse</li>
+            <li>Jeder Bit kann nur 2 zustände erreichen (0,1)</li>
+            <li>Verfügbare Adressen: 2<sup>32</sup>= ca. 4,3 Milliarden</li>
+            <li>Besteht aus Dezimal (0 - 9)</li>
+            <li>Keine integrierten Sicherheitsmaßnahmen</li>
+            <li>Adressknappheit führte zu IPv6</li>
+        </ul>
+
+        <h1>Wissenswertes zu IPv4:</h1>
+        <p><b>Vierte Version des Internet-Protokolls</b><br>
+            IPv4 ist die heute am weitesten verbreitete IP-Version. Wird benötigt, um Daten hin und her zu schicken.</p>
+        <p><b>Das Internet-Protokoll (IP)</b><br>
+            IP definiert, wie Datenpakete zwischen Geräten in einem Netzwerk gesendet und empfangen werden. IPv4 war lange Zeit das Standardprotokoll für den weltweiten Internetverkehr.</p>
+        <p><b>Adresslänge</b><br>
+            IPv4 verwendet 32-Bit-Adressen.<br>
+            Ein Bit ist die kleinste Informationseinheit und IPv4-Adressen bestehen aus 32 solcher Bits.<br>
+            Das bedeutet, dass es insgesamt etwa 4,3 Milliarden (2<sup>32</sup>) eindeutige IPv4-Adressen gibt.</p>
+        <p><b>Adressformat</b><br>
+            IPv4-Adressen werden in dezimaler Notation geschrieben, wobei die 32-Bit-Adresse in vier Gruppen von 8 Bits (Oktette) aufgeteilt wird. Diese Oktette werden als dezimale Zahlen dargestellt und durch Punkte getrennt.</p>
+        <p><b>Beispiel:</b> 192.168.0.1</p>
+        <p>(2<sup>32</sup> ist das Binärsystem… es gibt nur zwei Zustände)</p>
+        <h2>IPv4-Adresstypen</h2>
+        <p>Bei der IP-Adresse geht es um die Adressierung, also Datenpakete an einem bestimmten Empfänger zu schicken.<br>
+            IPv4-Adressen werden in verschiedene Kategorien unterteilt, je nachdem, wie sie verwendet werden:</p>
+        <p><b>Unicast-Adressen</b><br>
+            Eine Unicast-Adresse bezeichnet ein einzelnes Gerät in einem Netzwerk. Daten, die an eine Unicast-Adresse gesendet werden, erreichen genau dieses Gerät.</p>
+        <h2>Multicast-Adressen</h2>
+        <p>Eine Multicast-Adresse ermöglicht es, Daten an eine Gruppe von Geräten zu senden, die für den Empfang dieser Daten registriert sind. Diese Technik wird beispielsweise für Video- und Audioübertragungen verwendet.</p>
+        <p><b>Beispiel:</b><br>
+            Multicast-Adressen liegen im Bereich „224.0.0.0“ bis „239.255.255.255“.</p>
+        <h2>Broadcast-Adressen</h2>
+        <p>Eine Broadcast-Adresse wird verwendet, um Daten an alle Geräte in einem Netzwerksegment zu senden.</p>
+        <p><b>Beispiel:</b><br>
+            In einem lokalen Netzwerk mit dem Subnetz „192.168.0.0/24“ ist die Broadcast-Adresse „192.168.0.255“.</p>
+        <h1>Adressbereiche</h1>
+        <p>In den frühen Tagen des Internets wurden IPv4-Adressen in verschiedene Klassen unterteilt, um Netzwerke nach ihrer Größe zu kategorisieren. Dieses System war als klassenbasiertes Netzwerk bekannt.</p>
+        <p>Die IPv4-Adressen wurden in fünf Klassen unterteilt, wobei jede Klasse eine unterschiedliche Anzahl an Netzwerken und Hosts unterstützen konnte:</p>
+        <table>
+            <tr>
+                <th>Klasse</th>
+                <th>Netzwerkgröße</th>
+                <th>Erstes Oktett</th>
+                <th>Beispiel</th>
+                <th>Netzwerkbereich</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>Groß (bis zu 16 Millionen Hosts)</td>
+                <td>1 – 126</td>
+                <td>10.0.0.1</td>
+                <td>10.0.0.0/8</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Mittel (bis zu 65.536 Hosts)</td>
+                <td>128-191</td>
+                <td>172.16.0.1</td>
+                <td>172.16.0.0/16</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Klein (bis zu 254 Hosts)</td>
+                <td>192-223</td>
+                <td>192.168.0.1</td>
+                <td>192.168.0.0/24</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Reserviert für Multicasting</td>
+                <td>224-239</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>Reserviert für experimentelle Zwecke</td>
+                <td>240-255</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+        <h2>Nachteile des klassenbasierten Systems</h2>
+        <p>Das klassenbasierte System war sehr ineffizient in der Nutzung der IPv4-Adressen. Beispielsweise hätte ein Unternehmen, das nur 300 Hosts benötigt, ein Klasse-B-Netzwerk mit 65.536 Adressen zugewiesen bekommen, obwohl es nur einen Bruchteil dieser Adressen wirklich nutzte.</p>
+        <h3>Zuweisung</h3>
+        <p>Die IANA (Internet Assigned Numbers Authority) verwaltet global die Zuweisung von IP-Adressen. Sie delegiert die Vergabe an regionale Internetregistrierungsstellen (RIRs) wie RIPE NCC für Europa.</p>
+        <p>Um diese Verschwendung zu vermeiden, entwickelte sich ein flexibleres System.</p>
+        <p>Damals gab es noch keine privaten IP-Adressen.</p>
+
+        <h1>CIDR und Subnetting: Aufteilung von Netzwerken</h1>
+        <p>Um das Problem der ineffizienten Adressvergabe zu lösen, wurde <b>CIDR (Classless Inter-Domain Routing)</b> eingeführt. CIDR ist ein flexibler Ansatz zur Adressierung und löst das klassenbasierte System ab.</p>
+        <h2>Subnetting</h2>
+        <p><b>Subnetting</b> ist der Prozess, ein großes Netzwerk in kleinere, logisch getrennte Netzwerke zu unterteilen.<br>
+        Dies geschieht, um Ressourcen effizienter zu nutzen, den Adressraum optimal zu verteilen und Netzwerke besser zu organisieren.</p>
+        <h2>Subnetzmaske</h2>
+        <p>Eine <b>Subnetzmaske</b> teilt die IP-Adresse in Netzwerkanteil und Hostanteil auf.</p>
+        <p><b>Beispiel:</b></p>
+        <p>IP-Adresse: 192.168.0.1<br>
+        Es ist nicht erkennbar, welcher Teil der Netzwerkanteil und welcher der Hostanteil ist. Durch die Subnetzmaske wird dieses ersichtlich, z.B. 255.255.255.0. Die ersten 3 Oktette sind 255, somit gehören diese zum Netzwerkanteil, die restlichen gehören zum Hostanteil. ➜ 192.168.0.1</p>
+        <h2>Netzwerkanteil</h2>
+        <p>Bestimmt, zu welchem Netzwerk die IP-Adresse gehört.</p>
+        <h2>Hostanteil</h2>
+        <p>Bestimmt, welches spezifische Gerät im Netzwerk die IP-Adresse hat.</p>
+        <p><b>Beispiel:</b> Die Subnetzmaske „255.255.255.0“ bedeutet, dass die ersten 24 Bits der IP-Adresse den Netzwerkanteil darstellen und die restlichen 8 Bits den Hostanteil.</p>
+        <h2>Verständnis Erklärung</h2>
+        <p>IPv4 besteht aus 32 Bits. Ein Oktett besteht aus 8 Zahlen, die entweder 0 oder 1 sind.</p>
+        <p>Wenn alle Zahlen im Oktett auf 1 sind, ergibt es 255, da der Aufbau folgendes ist:</p>
+        <table>
+            <tr>
+                <th>128</th>
+                <th>64</th>
+                <th>32</th>
+                <th>16</th>
+                <th>8</th>
+                <th>4</th>
+                <th>2</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>Die Summe ergibt 255.</p>
+        <p>Eine Subnetzmaske mit 255.255.255.0 bedeutet nichts anderes als:</p>
+        <p>11111111.11111111.11111111.00000000<br>
+        1*8 + 1*8 + 1*8 + 0*8 = 24 Bits</p>
+        <h1>CIDR-Notation und Subnetzmasken</h1>
+        <p>Um die CIDR-Notation und Subnetzmaske besser zu verstehen, beachten wir eine Tabelle mit Beispielen:</p>
+        <table>
+            <tr>
+                <th>CIDR-Notation</th>
+                <th>Subnetzmaske</th>
+                <th>Binäre Darstellung der Subnetzmaske</th>
+                <th>Anzahl der Hosts</th>
+            </tr>
+            <tr>
+                <td>/24</td>
+                <td>255.255.255.0</td>
+                <td>11111111.11111111.11111111.00000000</td>
+                <td>254</td>
+            </tr>
+            <tr>
+                <td>/25</td>
+                <td>255.255.255.128</td>
+                <td>11111111.11111111.11111111.10000000</td>
+                <td>126</td>
+            </tr>
+            <tr>
+                <td>/26</td>
+                <td>255.255.255.192</td>
+                <td>11111111.11111111.11111111.11000000</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>/27</td>
+                <td>255.255.255.224</td>
+                <td>11111111.11111111.11111111.11100000</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>/28</td>
+                <td>255.255.255.240</td>
+                <td>11111111.11111111.11111111.11110000</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>/29</td>
+                <td>255.255.255.248</td>
+                <td>11111111.11111111.11111111.11111000</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>/30</td>
+                <td>255.255.255.252</td>
+                <td>11111111.11111111.11111111.11111100</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <p>Überall, wo eine 1 steht, ist reserviert (für den Netzwerkanteil), der Rest ist für den Hostbereich.</p>
+        <p>Diese Tabelle zeigt, wie die CIDR-Notation mit der entsprechenden Subnetzmaske und ihrer binären Darstellung zusammenhängt. Die Anzahl der verfügbaren Hosts ergibt sich aus der Formel 2<sup>32-n</sup> - 2, wobei n die Anzahl der Netzwerkbits ist (die Zahl nach dem Schrägstrich in der CIDR-Notation).</p>
+        <h1>Hostanteil Berechnen</h1>
+        <p>Wir schauen uns die übriggebliebenen Nullen an, und diese muss man 2<sup>Anzahl Nullen</sup> nehmen.</p>
+        <p>Also wäre es bei der ersten mit 8 übrigen Nullen 2<sup>8</sup> = 256. Da jedes Subnetz eine Netzwerkadresse und eine Broadcastadresse hat, muss man immer minus 2 rechnen.</p>
+        <h2>Was bedeutet 192.168.0.1/25?</h2>
+        <p>Man beachtet als erstes /25, da dies eine andere Form der Subnetzmaske ist. Dies bedeutet folgendes:</p>
+        <ul>
+            <li>1 Oktett = 8 Bits</li>
+            <li>8 + 8 + 8 = 24</li>
+            <li>Es fehlt also 1 Bit, das wir einfach dranhängen müssen: 11111111.11111111.11111111.10000000</li>
+        </ul>
+        <p>Dies entspricht 255.255.255.128</p>
+
+
+    
+    <h1>Netzwerk-ID und Host-ID</h1>
+    <p>Bei der Aufteilung einer IP-Adresse in Netzwerk- und Host-Anteile spielen zwei wichtige Konzepte eine Rolle: die <b>Netzwerk-ID</b> und die <b>Host-ID</b>.</p>
+    <h2>Netzwerk-ID</h2>
+    <p>Diese ist der Teil der IP-Adresse, der das Netzwerk identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 1 gesetzt sind. Alle Geräte im selben Netzwerk teilen sich die gleiche Netzwerk-ID.</p>
+    <h2>Host-ID</h2>
+    <p>Dies ist der Teil der IP-Adresse, der ein spezifisches Gerät innerhalb des Netzwerks identifiziert. Er wird durch die Bits bestimmt, die in der Subnetzmaske auf 0 gesetzt sind. Jedes Gerät im Netzwerk muss eine einzigartige Host-ID haben.</p>
+    <p><b>Beispiel:</b><br>
+    Betrachten wir die IP-Adresse 192.168.1.100 mit der Subnetzmaske 255.255.255.0 (oder /24 in CIDR-Notation):</p>
+        <ul>
+            <li><b>Netzwerk-ID:</b> 192.168.1.0</li>
+            <li><b>Host-ID:</b> 0.0.0.100</li>
+        </ul>
+    <p>In diesem Fall sind die ersten 24 Bits (3 Bytes) die Netzwerk-ID, und die letzten 8 Bits (1 Byte) bilden die Host-ID. Die Aufteilung in Netzwerk-ID und Host-ID ermöglicht eine effiziente Routing-Entscheidung und die Organisation von Geräten innerhalb eines Netzwerks.</p>
+    <h1>CIDR-Notation</h1>
+    <p>In den frühen Tagen des Internets wurden IPv4-Adressen in verschiedene Klassen unterteilt, um Netzwerke nach ihrer Größe zu kategorisieren. Dieses System war als klassenbasiertes Netzwerk bekannt. Die IPv4-Adressen wurden in fünf Klassen unterteilt, wobei jede Klasse eine unterschiedliche Anzahl an Netzwerken und Hosts unterstützen konnte:</p>
+    <p>Mit <b>CIDR</b> wurde ein flexibler Ansatz zur Adressierung entwickelt, um die starren Klassen A, B und C zu umgehen. CIDR drückt die Subnetzmaske als Suffix aus, indem die Anzahl der Bits angegeben wird, die den Netzwerkanteil darstellen.</p>
+    <h2>Beispiel:</h2>
+    <p>192.168.1.0/24 bedeutet, dass die ersten 24 Bits für das Netzwerk reserviert sind und die restlichen 8 Bits für Hosts innerhalb des Netzwerks verwendet werden. Dies ergibt ein Subnetz mit 256 möglichen Adressen.</p>
+    <p><b>Binäre und Dezimale Darstellung von /24:</b><br>
+    <code>/24 → 11111111.11111111.11111111.00000000 → 255.255.255.0</code></p>
+    <h1>VLSM (Variable Length Subnet Mask)</h1>
+    <p>Mit <b>VLSM</b> kann man Subnetze unterschiedlicher Größe innerhalb eines Netzwerks erstellen. Dies macht die Netzwerksegmentierung effizienter, indem nur die notwendige Anzahl von Adressen für jedes Subnetz reserviert wird.</p>
+    <h2>Beispiel:</h2>
+    <ul>
+        <li>Class-C Netzwerk: 192.168.1.0/24</li>
+        <li>Subnet 1: 192.168.1.0/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
+        <li>Subnet 2: 192.168.1.64/26 (64 Adressen) /26 → 6 Bits übrig → 2<sup>6</sup> = 64</li>
+        <li>Subnet 3: 192.168.1.128/27 (32 Adressen) /27 → 5 Bits übrig → 2<sup>5</sup> = 32</li>
+    </ul>
+    <p><b>Mit VLSM kann man also viel präziser Adressen zuweisen und Verschwendung vermeiden.</b></p>
+    <h1>Private IPv4-Adressen und NAT</h1>
+    <p><b>Private IPv4-Adressen</b> sind dazu da, um den begrenzten öffentlichen Adressraum zu schonen und sind im Internet nicht erreichbar. Diese Adressen werden in internen Netzwerken verwendet. Die reservierten Bereiche für private Adressen in verschiedenen Klassen sind:</p>
+    <b>Netzwerk Klassen</b>
+    <ul>
+        <li><b>Klasse A:</b> 10.0.0.0 bis 10.255.255.255</li>
+        <li><b>Klasse B:</b> 172.16.0.0 bis 172.31.255.255</li>
+        <li><b>Klasse C:</b> 192.168.0.0 bis 192.168.255.255</li>
+    </ul>
+    <p>Ein typisches Beispiel für eine private Adresse in Heimnetzwerken ist: <b>192.168.1.1.</b></p>
+    <h2>Verbindung zwischen privaten Adressen und NAT</h2>
+    <p><b>NAT</b> wird verwendet, um Geräte mit privaten IP-Adressen mit dem Internet zu verbinden, indem private IP-Adressen in eine öffentliche IP-Adresse übersetzt werden, die im Internet verwendet werden kann.<br> Dadurch können mehrere Geräte mit einer einzigen öffentlichen IP-Adresse über das Internet kommunizieren.</p>
+    <p><b>Beispiel NAT</b><br>
+        PC_A hat eine private IP-Adresse und ist mit dem Router verbunden. Der Router hat eine öffentliche IP-Adresse [mit Internet verbunden].</p>
+    <p>Will PC_A also mit einem externen Server_XY [im Internet] kommunizieren, so geht dies über den Router. Der Router merkt sich, wer die Anfrage an den Server_XY geschickt hat, damit der Router weiß, an wen er die Antwort (Datenpaket) von Server_XY schicken soll und es somit nicht an PC_B landet.</p>
+    <h1>NAT (Network Address Translation)</h1>
+    <p><b>NAT</b> ist eine Technik, die hauptsächlich in IPv4-Netzwerken verwendet wird, um viele private IP-Adressen in einem Netzwerk auf eine oder wenige öffentliche IP-Adressen abzubilden.</p>
+    <h2>Zweck von NAT</h2>
+    <p>Es hilft, <b>öffentliche IP-Adressen</b> zu sparen, indem es ermöglicht, dass ein Netzwerk mit privaten Adressen (z.B. 192.168.0.0/24) über eine einzige öffentliche Adresse kommunizieren kann.</p>
+    <h2>Typen von NAT</h2>
+    <ul>
+        <li><b>Static NAT:</b> Eine private IP-Adresse wird auf eine öffentliche IP-Adresse eins zu eins abgebildet.</li>
+        <li><b>Dynamic NAT:</b> Eine Gruppe von öffentlichen IP-Adressen wird dynamisch verschiedenen privaten IP-Adressen zugewiesen.</li>
+        <li><b>Port Address Translation (PAT):</b> Mehrere private IP-Adressen teilen sich eine einzige öffentliche IP-Adresse, wobei die Zuordnung über verschiedene Ports erfolgt.</li>
+    </ul>
+    <p><b>Beispiel:</b> Router weist dann den PC einen Port zu 192.168.0.1:42365</p>
+    <h1>DHCP (Dynamic Host Configuration Protocol)</h1>
+    <p><b>DHCP</b> ist ein Protokoll, das zur automatischen Zuweisung von IP-Adressen an Geräte in einem Netzwerk verwendet wird. Anstatt jedem Gerät eine statische IP-Adresse zuzuweisen, verteilt ein DHCP-Server Adressen aus einem vordefinierten Pool.</p>
+    <h2>Vorteile von DHCP</h2>
+    <ul>
+        <li><b>Automatische und dynamische Zuweisung von IP-Adressen</b></li>
+        <li><b>Vermeidung von IP-Adressenkonflikten</b></li>
+        <li><b>Reduzierung des Verwaltungsaufwands</b></li>
+    </ul>
+    <h2>Lease Time</h2>
+    <p>Die vom DHCP-Server zugewiesenen IP-Adressen sind nur für eine begrenzte Zeit, die sogenannte <b>Lease Time</b>, gültig. Nach Ablauf dieser Zeit muss das Gerät entweder eine neue IP-Adresse anfordern oder die bestehende erneuern.</p>
+    <h1>Vorteile und Herausforderungen von IPv4</h1>
+    <h2>Vorteile von IPv4</h2>
+    <ul>
+        <li><b>Weit verbreitet:</b> IPv4 ist das am weitesten verbreitete Protokoll und wird von nahezu allen Geräten und Netzwerken unterstützt.</li>
+        <li><b>Einfachheit:</b> IPv4 ist relativ einfach zu implementieren und zu verstehen.</li>
+        <li><b>NAT-Unterstützung:</b> Die Nutzung von NAT ermöglicht eine sparsame Nutzung der begrenzten öffentlichen IP-Adressen. (mehr oder weniger als Vorteil)</li>
+    </ul>
+    <h2>Herausforderungen bei IPv4</h2>
+    <ul>
+        <li><b>Adressknappheit:</b> IPv4 bietet nur etwa 4,3 Milliarden Adressen, was zu einer Knappheit führt, insbesondere mit der wachsenden Anzahl von Geräten. (IPv4-Adressen mieten kostet Geld)</li>
+        <li><b>Sicherheitsprobleme:</b> IPv4 bietet standardmäßig keine Sicherheitsfunktionen wie Verschlüsselung. Sicherheit muss durch zusätzliche Protokolle wie IPsec implementiert werden.</li>
+        <li><b>Komplexität durch NAT:</b> NAT kann die Netzwerkverwaltung und Fehlersuche erschweren, da es zu einer Übersetzung der Adressen führt, die den Netzwerkverkehr unübersichtlicher macht.</li>
+    </ul>
+    <h2>Zusammenfassung der IPv4-Schlüsselkonzepte</h2>
+    <p><b>Adressformat:</b> 32-Bit, dezimal</p>
+    <p><b>Adressierungstypen:</b> Unicast, Multicast, Broadcast</p>
+    <p><b>Private Adressen:</b> Nicht im Internet erreichbar, verwendet für lokale Netzwerke</p>
+    <p><b>Subnetting:</b> Aufteilen von Netzwerken, um sie effizienter zu nutzen</p>
+    <p><b>CIDR und VLSM:</b> Flexiblere Aufteilung von Netzwerken, um Adressen effizienter zu verwenden (z.B. /24)</p>
+    <p><b>NAT:</b> Erlaubt mehreren Geräten, über eine öffentliche IP-Adresse zu kommunizieren</p>
+    <p><b>DNS:</b> Wandelt Domain-Namen in IP-Adressen um</p>
+    <p><b>DHCP:</b> Automatische Zuweisung von IP-Adressen</p>
+    
+    </div>
+
+<!-- ##########################################################################################################
+#Thema 3 IPv6
+########################################################################################################## -->
+
+    <div id="thema3" class="content">
+    <h1>Internet Protocol Version 6 (IPv6)</h1>
+    <h2> Kurzer Überblick</h2>
+    <ul>
+        <li>Entwickelt als Nachfolger von IPv4</li>
+        <li>Besteht aus 8 Oktette</li>
+        <li>Jedes Oktett besteht aus 16 Bits</li>
+        <li>Insgesamt 128 Bits pro IPv6-Adresse</li>
+        <li>Verfügbare Adressen: 340 Sextillionen (2<sup>128</sup>)</li>
+        <li>Besteht aus Hexadezimal-Notation (0 - 9, A - F), da kompakter</li>
+        <li>Eingebaute Sicherheitsfunktionen (IPSec)</li>
+        <li>Löst das Problem der begrenzten Adressverfügbarkeit bei IPv4</li>
+    </ul>
+    
+    <h3> Wieso wurde IPv6 erfunden?</h3>
+    <ul>
+        <li>IPv4 Adressen gehen zur Neige</li>
+        <li>Wachsende Anzahl von internetfähigen Geräten</li>
+        <li>IPv6 bietet größere Adresskapazität und Effizienz</li>
+    </ul>
+    
+    <h2>Grundlegende Eigenschaften von IPv6</h2>
+    <h3>Adresslänge:</h3>
+    <p><b>IPv6 verwendet 128-Bit-Adressen.</b> Ein Bit ist die kleinste Informationseinheit in der Informatik. IPv6-Adressen sind daher 128 Einheiten lang, was die Anzahl der verfügbaren Adressen massiv erhöht. <br>
+        Also 2<sup>128</sup> Möglichkeiten!</p>
+    <h3>Adressformat:</h3>
+    <p><b>IPv6-Adressen werden in hexadezimaler Notation geschrieben.</b> Hexadezimal bedeutet, dass sie in einem Zahlensystem zur Basis 16 dargestellt werden, wobei die Ziffern von 0 bis 9 sowie die Buchstaben A bis F verwendet werden. IPv6-Adressen bestehen aus 8 Gruppen von jeweils 4 Hexadezimalstellen, getrennt durch Doppelpunkte. Beispiel: „2001:0db8:85a3:0000:0000:8a2e:0370:7334“.</p>
+    <h3>Adressraum:</h3>
+    <p>Der verfügbare Adressraum in IPv6 beträgt etwa <b>340 Sextillionen Adressen</b> (2<sup>128</sup>).
+
+
+    </div>
+
+
+
+<!-- ##########################################################################################################
+#Thema 4 - Karteikarten
+########################################################################################################## -->
+
+    <div id="flashcards" class="content">
+        <h1>Karteikarten zur AP1</h1>
+        <div class="container" id="tab1">
+            <div class="flashcard" id="flashcard1">
+                <div class="flashcard-inner" id="flashcardInner1">
+                    <div class="flashcard-front">
+                        <h2>Frage: Was ist die Hauptstadt von Deutschland?</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Antwort: Berlin</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" id="flashcard2">
+                <div class="flashcard-inner" id="flashcardInner2">
+                    <div class="flashcard-front">
+                        <h2>Frage: Was ist die Hauptstadt von Frankreich?</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Antwort: Paris</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" id="flashcard3">
+                <div class="flashcard-inner" id="flashcardInner3">
+                    <div class="flashcard-front">
+                        <h2>Frage: Was ist die Hauptstadt von Italien?</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Antwort: Rom</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
